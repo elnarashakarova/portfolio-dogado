@@ -3,7 +3,7 @@ from .models import Home, About, Profile, Category, Skills, Certificates, Projec
 
 # Portfolio
 
-# Home
+### Home
 admin.site.register(Home)
 
 
