@@ -12,9 +12,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'n3$*ph11c*8b$6dira-=3u10c&dxvzrh7mcrq_yn15i67hydza'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True     #### Later set it to False  !!!!!!!!!!
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['elnarashakarova.de', 'www.elnarashakarova.de',  '127.0.0.1']
 
 
 # Application definition
@@ -108,12 +108,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+
+# settings.py    ##### added for docker DOCKER ################
+
+# STATIC_URL = '/static/'
+# STATIC_ROOT = '/app/static_root'
+
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = '/app/media_root'
+
+###################################
+
+STATIC_URL = '/static/'        ### from previous code 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root/')
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_root/')
-
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]

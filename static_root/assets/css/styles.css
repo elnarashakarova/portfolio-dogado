@@ -526,9 +526,15 @@ img{
 }
 
 .projects__video {
-    display: block; /* Ensure video displays correctly */
-    max-width: 100%; /* Prevent video from exceeding container width 100 */
-    height: auto; /* Maintain aspect ratio */
+    display: flex; /* Ensure video displays correctly */
+    flex-direction: column;
+    /* max-width: 100%; /* Prevent video from exceeding container width 100 */
+    /* height: auto; /* Maintain aspect ratio */
+}
+
+video {
+    height: 200px;
+    width: 200px;
 }
 
 

@@ -7,6 +7,10 @@
 
         <!-- ===== CSS ===== -->
         <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+       
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     
+        
 
         <!-- ===== BOX ICONS ===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -186,11 +190,11 @@
                                 {% for certificate in certificates %}
                                 
                                 <div class="certificate__img">
-                                    <img src="{{ certificate.image.url }}" alt="">
+                                    <a href="{{certificate.image.url}}"><img src="{{ certificate.image.url }}" alt=""></a> {% comment %} <img src="{{ certificate.image.url }}" alt=""> {% endcomment %}
             
-                                    <div class="certificates__link">
+                                    {% comment %} <div class="certificates__link">
                                         <a href="{{ certificate.link }}" class="certificates__link-name">View details</a>
-                                    </div>
+                                    </div> {% endcomment %}
                                 </div>
             
                                 {% endfor %}
@@ -261,9 +265,8 @@
                     <h2 class="footer__title">FOLLOW</h2>
                     <a href="https://www.linkedin.com/in/elnara-shakarova/" class="footer__social"><i class='bx bxl-linkedin' ></i></a>
                     <a href="https://github.com/elnarashakarova" class="footer__social"><i class='bx bxl-github' ></i></a>
-                   <!--  <a href="#" class="footer__social"><i class='bx bxl-twitter' ></i></a>  -->
+                    <a href="https://www.xing.com/profile/Elnara_Shakarova/" class="footer__social"><i class='fab fa-xing'></i></a>
                 </div>
-
 
             </div>
         </footer>
