@@ -93,6 +93,7 @@ class Projects(models.Model):
 class Certificates(models.Model):
     image = models.ImageField(upload_to='certificates/')
     link = models.URLField(max_length=200)
+    title = models.TextField(max_length=250, default='title name')
 
     def __str__(self):
         return f'Certificates {self.id}'
