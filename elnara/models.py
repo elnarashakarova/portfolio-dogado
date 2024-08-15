@@ -68,13 +68,24 @@ class Skills(models.Model):
     
 # PPOJECTS SECTION  ######
 
+# class Projects(models.Model):
+#     image = models.ImageField(upload_to='projects/', blank=True, null=True)
+#     video = models.FileField(upload_to = 'projects/', default='default_video.mp4', blank=True, null=True)    
+#     #link = models.URLField(max_length=200)
+
+#     def __str__(self):
+#         return f'Projects {self.id}'
+
+
+# PROJECTS SECTION
 class Projects(models.Model):
-    image = models.ImageField(upload_to='projects/', blank=True, null=True)
-    video = models.FileField(upload_to = 'projects/', default='default_video.mp4', blank=True, null=True)
-    link = models.URLField(max_length=200)
+    #image = models.ImageField(upload_to='projects/', blank=True, null=True)
+    video = models.TextField(blank=True, null=True, help_text="Add the embed link of the video")
+    link = models.URLField(max_length=200, default='http://example.com')  # Set a default value here
 
     def __str__(self):
         return f'Projects {self.id}'
+
     
     
 # Certificate SECTION   ######

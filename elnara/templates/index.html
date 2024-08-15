@@ -147,11 +147,11 @@
         <!-- Container for each project item -->
         <div class="projects__item">
             
-            <!-- Display image -->
+            {% comment %} <!-- Display image -->
             <div class="projects__img">
                 <!-- Corrected loop variable from projects.image to project.image -->
                 <img src="{{ project.image.url }}" alt="">
-            </div>
+            </div> {% endcomment %}
 
             <!-- Display video if available -->
             {% if project.video %}
@@ -159,16 +159,18 @@
                 <!-- Added video controls and source tag -->
                 <video controls>
                     <source src="{{ project.video.url }}" type="video/mp4">
+                    {% comment %} <a href="{{project.video.url}}"><img src="{{ projects.video.url }}" alt=""></a>  {% endcomment %}
                     Your browser does not support the video tag.
                 </video>
             </div>
             {% endif %}
     
             <!-- Link to project details -->
-            <div class="projects__link">
+             <div class="projects__link">
                 <!-- Corrected loop variable from projects.link to project.link -->
-                <a href="{{ project.link }}" class="projects__link-name">View details</a>
-            </div>
+                <a href="{{ project.link }}" class="projects__link-name">View a short video summary of the project here:</a>
+            <p>  This project is about the basics of social sustainability.</p>
+            </div> 
 
         </div>
 
